@@ -10,7 +10,8 @@ namespace FetchDataFromInternet
     {
         static void Main(string[] args)
         {
-            SearchResult searchResult = SearchArtist(args[0], "true");
+            string[] arr = args[0].Split(".");
+            SearchResult searchResult = SearchArtist(string.Join(" ", arr), "true");
 
             for (int i = 0; i < searchResult.total; i++)
             {
@@ -44,7 +45,6 @@ namespace FetchDataFromInternet
                 }
             }
         }
-
 
         private static Arts SearchArt(int objectIds)
         {
