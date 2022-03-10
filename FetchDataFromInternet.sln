@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchDataFromInternet", "FetchDataFromInternet\FetchDataFromInternet.csproj", "{AECCFC2E-E144-4DA1-9D00-2A62F5613190}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AECCFC2E-E144-4DA1-9D00-2A62F5613190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECCFC2E-E144-4DA1-9D00-2A62F5613190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECCFC2E-E144-4DA1-9D00-2A62F5613190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECCFC2E-E144-4DA1-9D00-2A62F5613190}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B15E1AC-256C-4820-A3BB-CDB8AD9997EF}
+	EndGlobalSection
+EndGlobal
