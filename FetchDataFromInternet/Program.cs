@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text.Json;
@@ -13,13 +14,32 @@ namespace FetchDataFromInternet
             string[] arr = args[0].Split(".");
             SearchResult searchResult = SearchArtist(string.Join(" ", arr), "true");
 
+            List<string> objType = new List<string>() {
+                "Canvas",
+                "Drawings",
+                "Oil on canvas",
+                "Prints",
+                "Printing",
+                "Paintings "};
+
             for (int i = 0; i < searchResult.total; i++)
             {
                 Arts arts = SearchArt(searchResult.objectIDs[i]);
                 if (arts != null)
                 {
                     Thread.Sleep(Convert.ToInt32(args[1]));
-                    SaveImage(arts.primaryImage, arts.title);
+
+
+                    List<string> temp = new List<string>();
+                    temp.Add(arts.artistDisplayName);
+                    temp.Add(arts.title);
+                    temp.Add(string.IsNullOrEmpty(arts.objectDate) ? "" : "(" + arts.objectDate + ")");
+
+
+                    string fileName = string.Join(" - ", temp.FindAll(x => !string.IsNullOrEmpty(x)));
+
+
+                    SaveImage(arts.primaryImage, fileName);
                 }
             }
         }
