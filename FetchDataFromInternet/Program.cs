@@ -12,15 +12,10 @@ namespace FetchDataFromInternet
         static void Main(string[] args)
         {
             string[] arr = args[0].Split(".");
+            
             SearchResult searchResult = SearchArtist(string.Join(" ", arr), "true");
 
-            List<string> objType = new List<string>() {
-                "Canvas",
-                "Drawings",
-                "Oil on canvas",
-                "Prints",
-                "Printing",
-                "Paintings "};
+           
 
             for (int i = 0; i < searchResult.total; i++)
             {
@@ -28,7 +23,6 @@ namespace FetchDataFromInternet
                 if (arts != null)
                 {
                     Thread.Sleep(Convert.ToInt32(args[1]));
-
 
                     List<string> temp = new List<string>();
                     temp.Add(arts.artistDisplayName);

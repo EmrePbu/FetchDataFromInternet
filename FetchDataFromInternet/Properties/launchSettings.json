@@ -2,7 +2,7 @@
   "profiles": {
     "FetchDataFromInternet": {
       "commandName": "Project",
-      "commandLineArgs": "vincent.van 1000"
+      "commandLineArgs": "vincent.van.oil.paint 1000"
     }
   }
 }
